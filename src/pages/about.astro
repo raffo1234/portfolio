@@ -1,17 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
 ---
 
 <Layout>
   <div
     transition:name="about"
-    class="max-w-[1250px] bg-[#704EE7] mx-auto h-full rounded-[62px] flex justify-center items-center relative"
+    class="max-w-[1250px] p-4 bg-[#704EE7] mx-auto h-full rounded-[62px] flex justify-center items-center relative"
   >
-    <Button href="/" classes="top-[30px] right-[30px]">
-      <Icon name="material-symbols-light:arrow-back-rounded" size="32" />
-    </Button>
+    <a
+      href="/"
+      class="w-[62px] h-[62px] flex items-center justify-center text-white top-[30px] right-[30px] bg-[#FCCF5A] absolute rounded-full"
+    >
+      <Icon name="material-symbols-light:arrow-back-rounded" size="62" />
+    </a>
     <div>
       <div class="flex items-center space-x-5 mb-6">
         <Icon
@@ -19,7 +21,12 @@ import Button from "../components/Button.astro";
           size="96"
           class="text-[#FCCF5A]"
         />
-        <h1 class="text-[#FCCF5A] text-[80px] font-nixie-one">RAFAEL MEZA</h1>
+        <h1
+          class="text-[#FCCF5A] text-[80px] font-nixie-one"
+          style="font-size:clamp(18px, 4vw + 1rem, 80px)"
+        >
+          RAFAEL MEZA
+        </h1>
       </div>
       <a
         href=""

@@ -1,48 +1,51 @@
 ---
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
-import Button from "../components/Button.astro";
 ---
 
 <Layout>
   <main
-    class="p-[80px] left-0 max-w-[1250px] mx-auto h-full bg-white rounded-[50px] w-full"
+    class="p-4 md:p-[40px] lg:p-[80px] left-0 max-w-[1250px] mx-auto lg:min-h-full bg-white rounded-[50px] w-full"
   >
-    <div class="flex space-x-5 mb-5 h-[60%]">
+    <div class="lg:flex lg:space-x-5 lg:mb-5 lg:h-[60%]">
       <a
         transition:name="about"
         href="/about"
-        class="w-[60%] bg-[#704EE7] rounded-[30px] flex justify-center items-center"
+        class="lg:w-[60%] h-[330px] w-full bg-[#704EE7] rounded-[30px] flex justify-center items-center"
       >
-        <div class="flex items-center space-x-5">
+        <div class="flex items-center space-x-5 p-4">
           <Icon
             name="material-symbols-light:award-star-rounded"
             size="96"
             class="text-[#FCCF5A]"
           />
-          <h1 class="text-[#FCCF5A] text-[50px] font-nixie-one">RAFAEL MEZA</h1>
+          <h1
+            class="text-[#FCCF5A] text-[50px] font-nixie-one"
+            style="font-size:clamp(18px, 4vw + 1rem, 80px)"
+          >
+            RAFAEL MEZA
+          </h1>
         </div>
       </a>
       <div
         transition:name="projects"
-        class="w-[40%] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
+        class="lg:w-[40%] w-full h-[330px] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
       >
         <Icon
           name="material-symbols-light:award-star-rounded"
           size="196"
           class="text-[#FFE5A2] absolute -right-[80px]"
         />
-        <Button
+        <a
           href="/projects"
-          classes="bg-[#704EE7]"
-          class="absolute top-10 right-10"
+          class="flex items-center justify-center w-[52px] rounded-full absolute h-[52px] top-[10px] left-[10px] bg-[#704EE7]"
         >
           <Icon
             name="material-symbols-light:arrow-outward-rounded"
-            size="196"
-            class="text-[#FFE5A2] absolute -right-[80px]"
+            size="120"
+            class="text-[#FFE5A2]"
           />
-        </Button>
+        </a>
         <article class="absolute left-0 right-0 bottom-0 p-10">
           <h2 class="text-2xl mb-3 font-lobster">Web Development Projects</h2>
           <p>
@@ -52,8 +55,10 @@ import Button from "../components/Button.astro";
         </article>
       </div>
     </div>
-    <div class="flex space-x-6 h-[40%]">
-      <div class="w-[30%] bg-[#DFC8FD] rounded-[36px] overflow-hidden relative">
+    <div class="lg:flex lg:space-x-5 lg:h-[40%]">
+      <div
+        class="lg:w-[30%] bg-[#DFC8FD] h-[330px] rounded-[36px] overflow-hidden relative"
+      >
         <Icon
           name="material-symbols-light:cloud"
           size="196"
@@ -65,7 +70,7 @@ import Button from "../components/Button.astro";
         >
           <Icon
             name="material-symbols-light:arrow-outward-rounded"
-            size="32"
+            size="120"
             class="text-[#FCCF5A]"
           />
         </a>
@@ -80,7 +85,9 @@ import Button from "../components/Button.astro";
           </p>
         </article>
       </div>
-      <div class="w-[70%] bg-[#F3F3F3] rounded-[30px] overflow-hidden relative">
+      <div
+        class="lg:w-[70%] h-[330px] bg-[#F3F3F3] rounded-[30px] overflow-hidden relative"
+      >
         <Icon
           name="material-symbols-light:signpost-rounded"
           size="196"
