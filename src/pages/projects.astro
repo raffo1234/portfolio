@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout>
+  <div
+    transition:name="projects"
+    class="max-w-[1250px] bg-[#FCCF5A] mx-auto h-full rounded-[62px] flex justify-center items-center relative"
+  >
+    <a
+      href="/"
+      class="w-[62px] flex items-center justify-center h-[62px] absolute rounded-full top-[30px] right-[30px] bg-[#704EE7]"
+    >
+      <Icon
+        name="material-symbols-light:arrow-back-rounded"
+        size="32"
+        class="text-[#FCCF5A]"
+      />
+    </a>
+  </div>
+</Layout>

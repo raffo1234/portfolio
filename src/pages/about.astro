@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout>
+  <div
+    transition:name="about"
+    class="max-w-[1250px] bg-[#704EE7] mx-auto h-full rounded-[62px] flex justify-center items-center relative"
+  >
+    <Button href="/" classes="top-[30px] right-[30px]">
+      <Icon name="material-symbols-light:arrow-back-rounded" size="32" />
+    </Button>
+    <div>
+      <div class="flex items-center space-x-5 mb-6">
+        <Icon
+          name="material-symbols-light:award-star-rounded"
+          size="96"
+          class="text-[#FCCF5A]"
+        />
+        <h1 class="text-[#FCCF5A] text-[80px] font-nixie-one">RAFAEL MEZA</h1>
+      </div>
+      <a
+        href=""
+        class="bg-[#FCCF5A] place-self-end px-8 font-raleway py-2 w-fit flex items-center space-x-4 rounded-[40px]"
+        ><span> Download Resume </span>
+        <Icon
+          name="material-symbols-light:download-rounded"
+          size="48"
+          class="text-white"
+        />
+      </a>
+    </div>
+  </div>
+</Layout>

@@ -1,11 +1,97 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <main
+    class="p-[80px] left-0 max-w-[1250px] mx-auto h-full bg-white rounded-[50px] w-full"
+  >
+    <div class="flex space-x-5 mb-5 h-[60%]">
+      <a
+        transition:name="about"
+        href="/about"
+        class="w-[60%] bg-[#704EE7] rounded-[30px] flex justify-center items-center"
+      >
+        <div class="flex items-center space-x-5">
+          <Icon
+            name="material-symbols-light:award-star-rounded"
+            size="96"
+            class="text-[#FCCF5A]"
+          />
+          <h1 class="text-[#FCCF5A] text-[50px] font-nixie-one">RAFAEL MEZA</h1>
+        </div>
+      </a>
+      <div
+        transition:name="projects"
+        class="w-[40%] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
+      >
+        <Icon
+          name="material-symbols-light:award-star-rounded"
+          size="196"
+          class="text-[#FFE5A2] absolute -right-[80px]"
+        />
+        <Button
+          href="/projects"
+          classes="bg-[#704EE7]"
+          class="absolute top-10 right-10"
+        >
+          <Icon
+            name="material-symbols-light:arrow-outward-rounded"
+            size="196"
+            class="text-[#FFE5A2] absolute -right-[80px]"
+          />
+        </Button>
+        <article class="absolute left-0 right-0 bottom-0 p-10">
+          <h2 class="text-2xl mb-3 font-lobster">Web Development Projects</h2>
+          <p>
+            A showcase of innovative web applications focused on user
+            experience, functionality, and performance.
+          </p>
+        </article>
+      </div>
+    </div>
+    <div class="flex space-x-6 h-[40%]">
+      <div class="w-[30%] bg-[#DFC8FD] rounded-[36px] overflow-hidden relative">
+        <Icon
+          name="material-symbols-light:cloud"
+          size="196"
+          class="text-[#FFE5A2] absolute -right-[80px]"
+        />
+        <a
+          href=""
+          class="rounded-full absolute left-[10px] top-[10px] w-[52px] h-[52px] bg-[#704EE7] flex items-center justify-center"
+        >
+          <Icon
+            name="material-symbols-light:arrow-outward-rounded"
+            size="32"
+            class="text-[#FCCF5A]"
+          />
+        </a>
+        <article class="absolute left-0 right-0 bottom-0 p-10">
+          <h2 class="text-2xl mb-3 font-lobster">Get in Touch</h2>
+          <p>
+            Reach out via email or connect with me on social media. I'd love to
+            hear from you!
+          </p>
+        </article>
+      </div>
+      <div class="w-[70%] bg-[#F3F3F3] rounded-[30px] overflow-hidden relative">
+        <Icon
+          name="material-symbols-light:signpost-rounded"
+          size="196"
+          class="text-[#FFE5A2] absolute -right-[80px]"
+        />
+        <article class="absolute left-0 right-0 bottom-0 p-10">
+          <h2 class="text-2xl mb-3 font-lobster">Hobbies</h2>
+          <p>
+            Passionate about sports like soccer, running, and biking. I also
+            enjoy designing and crafting furniture using SketchUp
+          </p>
+        </article>
+      </div>
+    </div>
+  </main>
 </Layout>
