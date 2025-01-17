@@ -1,6 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Button from "../components/Button.astro";
 ---
@@ -61,7 +60,7 @@ import Button from "../components/Button.astro";
           class="text-[#FFE5A2] absolute -right-[80px]"
         />
         <a
-          href=""
+          href="/contact"
           class="rounded-full absolute left-[10px] top-[10px] w-[52px] h-[52px] bg-[#704EE7] flex items-center justify-center"
         >
           <Icon
@@ -70,7 +69,10 @@ import Button from "../components/Button.astro";
             class="text-[#FCCF5A]"
           />
         </a>
-        <article class="absolute left-0 right-0 bottom-0 p-10">
+        <article
+          transition:name="contact"
+          class="absolute left-0 right-0 bottom-0 p-10"
+        >
           <h2 class="text-2xl mb-3 font-lobster">Get in Touch</h2>
           <p>
             Reach out via email or connect with me on social media. I'd love to
