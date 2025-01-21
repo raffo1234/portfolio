@@ -3,6 +3,11 @@ import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import tiger from "../assets/portfolio/tiger.png";
+import renta2014 from "../assets/portfolio/renta-2014.png";
+import travelmax from "../assets/portfolio/travelmax.png";
+import yachay from "../assets/portfolio/yachay.png";
+
+const images = [tiger, renta2014, travelmax, yachay];
 ---
 
 <Layout>
@@ -12,34 +17,45 @@ import tiger from "../assets/portfolio/tiger.png";
   >
     <a
       href="/"
-      class="w-[62px] flex items-center justify-center h-[62px] absolute rounded-full top-[30px] right-[30px] bg-[#704EE7]"
+      class="w-[62px] flex items-center justify-center h-[62px] absolute rounded-full top-[30px] z-20 right-[30px] bg-[#704EE7]"
     >
       <Icon
-        name="material-symbols-light:arrow-back-rounded"
+        name="material-symbols-light:arrow-insert-rounded"
         size="62"
-        class="text-[#FCCF5A]"
+        class="text-[#FCCF5A] -rotate-90"
       />
     </a>
-    <div class="space-x-5 flex items-center w-full md:p-[40px] lg:p-[80px]">
-      <div
-        class="flex justify-end rounded-[30px] flex-1 bg-white w-[40%] h-[330px] p-10"
-      >
-        <ul class="text-right font-raleway">
-          <li>Frontend Development</li>
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Javascript</li>
-          <li>GSAP</li>
-          <li>Jquery</li>
-        </ul>
-      </div>
-      <div class="rounded-[30px] flex-1 w-[40%] h-[330px] relative">
-        <Image
-          src={tiger}
-          class="object-contain w-full h-full"
-          alt="Rafael Meza | Portfolio"
-        />
+    <div class="flex items-center h-full w-full md:p-5 lg:p-10">
+      <div class="w-full h-full flex justify-center relative">
+        {
+          images.map((image) => {
+            return (
+              <Image
+                src={image}
+                class="slide-js opacity-0 transition-opacity ease-in-out duration-1000 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 object-contain w-full h-full"
+                alt="Rafael Meza | Portfolio"
+              />
+            );
+          })
+        }
       </div>
     </div>
   </div>
 </Layout>
+
+<script is:inline>
+  const slides = document.querySelectorAll(".slide-js");
+  let currentSlide = 0;
+
+  slides[0].classList.add("!opacity-100");
+
+  function showNextSlide() {
+    for (const el of slides) {
+      el.classList.remove("!opacity-100");
+    }
+    slides[currentSlide].classList.add("!opacity-100");
+    currentSlide = (currentSlide + 1) % slides.length;
+  }
+
+  setInterval(showNextSlide, 3000);
+</script>

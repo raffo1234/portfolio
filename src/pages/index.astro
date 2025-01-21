@@ -27,7 +27,8 @@ import Layout from "../layouts/Layout.astro";
           </h1>
         </div>
       </a>
-      <div
+      <a
+        href="/projects"
         transition:name="projects"
         class="lg:w-[40%] w-full h-[330px] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
       >
@@ -36,27 +37,18 @@ import Layout from "../layouts/Layout.astro";
           size="196"
           class="text-[#FFE5A2] absolute -right-[80px]"
         />
-        <a
-          href="/projects"
-          class="flex items-center justify-center w-[52px] rounded-full absolute h-[52px] top-[10px] left-[10px] bg-[#704EE7]"
-        >
-          <Icon
-            name="material-symbols-light:arrow-outward-rounded"
-            size="120"
-            class="text-[#FFE5A2]"
-          />
-        </a>
-        <article class="absolute left-0 right-0 bottom-0 p-10">
+        <div class="absolute left-0 right-0 bottom-0 p-10">
           <h2 class="text-2xl mb-3 font-lobster">Web Development Projects</h2>
           <p>
             A showcase of innovative web applications focused on user
             experience, functionality, and performance.
           </p>
-        </article>
-      </div>
+        </div>
+      </a>
     </div>
     <div class="lg:flex lg:space-x-5 lg:h-[40%]">
-      <div
+      <a
+        href="/contact"
         class="lg:w-[30%] bg-[#DFC8FD] h-[330px] rounded-[36px] overflow-hidden relative"
       >
         <Icon
@@ -64,7 +56,7 @@ import Layout from "../layouts/Layout.astro";
           size="196"
           class="text-[#FFE5A2] absolute -right-[80px]"
         />
-        <a
+        <!-- <a
           href="/contact"
           class="rounded-full absolute left-[10px] top-[10px] w-[52px] h-[52px] bg-[#704EE7] flex items-center justify-center"
         >
@@ -73,7 +65,7 @@ import Layout from "../layouts/Layout.astro";
             size="120"
             class="text-[#FCCF5A]"
           />
-        </a>
+        </a> -->
         <article
           transition:name="contact"
           class="absolute left-0 right-0 bottom-0 p-10"
@@ -84,7 +76,7 @@ import Layout from "../layouts/Layout.astro";
             hear from you!
           </p>
         </article>
-      </div>
+      </a>
       <div
         class="lg:w-[70%] h-[330px] bg-[#F3F3F3] rounded-[30px] overflow-hidden relative"
       >
