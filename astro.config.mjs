@@ -10,4 +10,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), icon(), react()],
+  vite: {
+    build: {
+      assetsInlineLimit: 0,
+    },
+  },
 });
