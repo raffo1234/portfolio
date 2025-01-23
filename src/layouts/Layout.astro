@@ -2,7 +2,7 @@
 import "@fontsource/Raleway";
 import "@fontsource/lobster";
 import "@fontsource/nixie-one";
-// import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -13,6 +13,7 @@ import "@fontsource/nixie-one";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Rafael Meza | Portfolio</title>
+    <ClientRouter />
   </head>
   <body id="app" class="bg-[#D8C1F6] p-3 md:p-6 lg:p-9 h-full">
     <slot />
