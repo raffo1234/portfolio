@@ -44,7 +44,8 @@ const images = [tiger, renta2014, travelmax, yachay];
 </Layout>
 
 <script>
-  function showNextSlide(currentSlide: number, slides: NodeListOf<Element>) {
+  let currentSlide = 0;
+  function showNextSlide(slides: NodeListOf<Element>) {
     for (const el of slides) {
       el.classList.remove("!opacity-100");
     }
@@ -54,11 +55,10 @@ const images = [tiger, renta2014, travelmax, yachay];
 
   document.addEventListener("astro:page-load", () => {
     const slides = document.querySelectorAll(".slide-js");
-    let currentSlide = 0;
 
     if (slides.length > 0) {
       slides[0].classList.add("!opacity-100");
-      setInterval(() => showNextSlide(currentSlide, slides), 1500);
+      setInterval(showNextSlide, 1500, slides);
     }
   });
 </script>
