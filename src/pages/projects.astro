@@ -44,11 +44,11 @@ const images = [
     <div class="flex items-center h-full w-full md:p-5 lg:p-10">
       <div class="w-full h-full flex justify-center relative">
         {
-          images.map((image) => {
+          images.map((image, index) => {
             return (
               <Image
                 src={image}
-                class="slide-js opacity-0 transition-opacity ease-in-out duration-1000 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 object-contain w-full h-full"
+                class={`${index === 0 ? "!opacity-100" : ""}  slide-js opacity-0 transition-opacity ease-in-out duration-1000 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 object-contain w-full h-full`}
                 alt="Rafael Meza | Portfolio"
               />
             );
@@ -59,9 +59,9 @@ const images = [
   </div>
 </Layout>
 
-<script>
+<script is:inline>
   let currentSlide = 0;
-  function showNextSlide(slides: NodeListOf<Element>) {
+  function showNextSlide(slides) {
     for (const el of slides) {
       el.classList.remove("!opacity-100");
     }
@@ -69,12 +69,9 @@ const images = [
     currentSlide = (currentSlide + 1) % slides.length;
   }
 
-  document.addEventListener("astro:page-load", () => {
-    const slides = document.querySelectorAll(".slide-js");
+  const slides = document.querySelectorAll(".slide-js");
 
-    if (slides.length > 0) {
-      slides[0].classList.add("!opacity-100");
-      setInterval(showNextSlide, 1500, slides);
-    }
-  });
+  if (slides.length > 0) {
+    setInterval(showNextSlide, 1200, slides);
+  }
 </script>
