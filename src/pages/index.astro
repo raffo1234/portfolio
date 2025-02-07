@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <main
-    class="p-4 md:p-[40px] lg:p-[80px] left-0 max-w-[1250px] mx-auto lg:min-h-full bg-white rounded-[50px] w-full"
+    class="p-4 md:p-[40px] lg:p-[80px] left-0 max-w-[1250px] mx-auto lg:min-h-full bg-white rounded-[48px] w-full"
   >
     <div class="lg:flex lg:space-x-5 lg:mb-5 lg:h-[60%]">
       <a
@@ -20,14 +20,15 @@ import Layout from "../layouts/Layout.astro";
             class="text-[#FCCF5A]"
           />
           <h1
-            class="text-[#FCCF5A] text-[50px] font-nixie-one"
-            style="font-size:clamp(18px, 4vw + 1rem, 80px)"
+            class="text-[#FCCF5A] font-nixie-one"
+            style="font-size:clamp(18px, 4vw + 1rem, 50px)"
           >
             RAFAEL MEZA
           </h1>
         </div>
       </a>
       <a
+        transition:name="projects"
         href="/projects"
         class="lg:w-[40%] block w-full h-[330px] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
       >

@@ -8,7 +8,7 @@ import me from "../assets/rafael-meza.jpg";
 <Layout>
   <div
     transition:name="contact"
-    class="max-w-[1250px] px-4 py-16 bg-[#F9F9F9] mx-auto min-h-full rounded-[62px] flex justify-center items-center relative"
+    class="max-w-[1250px] px-4 py-16 bg-[#FFF3EA] mx-auto min-h-full rounded-[62px] flex justify-center items-center relative w-full"
   >
     <a
       href="/"
@@ -29,14 +29,18 @@ import me from "../assets/rafael-meza.jpg";
             class="text-[#FCCF5A]"
           />
           <h1
-            class="text-[#FCCF5A] text-[80px] font-nixie-one"
-            style="font-size:clamp(18px, 4vw + 1rem, 80px)"
+            class="text-[#FCCF5A] font-nixie-one"
+            style="font-size:clamp(18px, 4vw + 1rem, 60px)"
           >
             RAFAEL MEZA
           </h1>
         </div>
+        <p class="mb-4">
+          If you're looking for a professional to turn designs into clean and
+          responsive code, drop me a message!
+        </p>
         <div class="flex justify-end">
-          <a
+          <!-- <a
             download
             title="Download Rafael Meza Resume | PDF"
             href="/pdfs/Rafael-Meza-Resume.pdf"
@@ -49,11 +53,11 @@ import me from "../assets/rafael-meza.jpg";
               size="48"
               class="text-white"
             />
-          </a>
+          </a> -->
         </div>
       </div>
-      <div class="flex flex-wrap items-center justify-end space-x-4 space-y-4">
-        <p class="mb-1">
+
+      <!-- <p class="mb-1">
           <a
             href="mailto:rhmcord@gmail.com"
             class="border-b-2 border-b-[#FCCF5A] font-manrope"
@@ -82,10 +86,45 @@ import me from "../assets/rafael-meza.jpg";
             href="https://www.linkedin.com/in/rafael-meza"
             target="_blank"
             title="Rafael Meza Linkedin">Rafael Meza</a
-          >
-        </p>
+          > -->
+
+      <div
+        class="grid gap-4 w-full"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+        }}
+      >
+        <a
+          class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+        >
+          <Image
+            src={me}
+            class="absolute object-cover object-top w-full h-full"
+            alt="Rafael Meza"
+          />
+        </a>
+        <a
+          class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+        >
+          <Image
+            src={me}
+            class="absolute object-cover object-top w-full h-full"
+            alt="Rafael Meza"
+          />
+        </a>
+        <a
+          href=""
+          target="_blank"
+          class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+        >
+          <Image
+            src={me}
+            class="absolute object-cover object-top w-full h-full"
+            alt="Rafael Meza"
+          />
+        </a>
         <div
-          class="h-[200px] rounded-[30px] relative w-[200px] items-center justify-between overflow-hidden"
+          class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
         >
           <Image
             src={me}
