@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -18,14 +18,11 @@
     "@fontsource/raleway": "^5.1.1",
     "@iconify-json/material-symbols-light": "^1.2.12",
     "@iconify-json/mdi": "^1.2.2",
-    "@nanostores/persistent": "^0.10.2",
-    "@nanostores/react": "^0.8.4",
     "@tailwindcss/typography": "^0.5.15",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "astro": "^5.1.1",
     "astro-icon": "^1.1.5",
-    "nanostores": "^0.11.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwindcss": "^3.4.17"
