@@ -8,7 +8,15 @@ export default {
       lobster: ["Lobster", "sans-serif"],
       "nixie-one": ["Nixie One", "sans-serif"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        purple: "#704EE7",
+        orange: "#FCCF5A",
+        "light-orange": "#FFE5A2",
+        pink: "#DFC8FD",
+        "light-gray": "#DFC8FD",
+      },
+    },
   },
   plugins: [],
 };
