@@ -30,7 +30,7 @@ const images = [
   <Container>
     <div
       transition:name="hobbies-interests"
-      class="w-full max-w-[1250px] bg-[#FCCF5A] mx-auto rounded-[62px] flex relative"
+      class="w-full max-w-[1250px] bg-[#FCCF5A] mx-auto rounded-[40px] lg:rounded-[52px] flex relative"
     >
       <a
         href="/"
@@ -58,18 +58,20 @@ const images = [
 </Layout>
 
 <script is:inline>
-  let currentSlide = 0;
-  function showNextSlide(slides) {
-    for (const el of slides) {
-      el.classList.remove("!opacity-100");
+  document.addEventListener("astro:page-load", () => {
+    let currentSlide = 0;
+
+    const showNextSlide = (slides) => {
+      for (const el of slides) {
+        el.classList.remove("!opacity-100");
+      }
+      slides[currentSlide].classList.add("!opacity-100");
+      currentSlide = (currentSlide + 1) % slides.length;
+    };
+
+    const slides = document.querySelectorAll(".slide-js");
+    if (slides.length > 0) {
+      setInterval(showNextSlide, 1200, slides);
     }
-    slides[currentSlide].classList.add("!opacity-100");
-    currentSlide = (currentSlide + 1) % slides.length;
-  }
-
-  const slides = document.querySelectorAll(".slide-js");
-
-  if (slides.length > 0) {
-    setInterval(showNextSlide, 1200, slides);
-  }
+  });
 </script>
