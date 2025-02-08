@@ -4,102 +4,104 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main
-    class="p-4 md:p-[40px] lg:p-[80px] left-0 max-w-[1250px] mx-auto lg:min-h-full bg-white rounded-[48px] w-full"
-  >
-    <div class="lg:flex lg:space-x-5 lg:mb-5 lg:h-[60%]">
-      <a
-        transition:name="about"
-        href="/about-me"
-        class="lg:w-[60%] h-[330px] w-full bg-[#704EE7] rounded-[30px] flex justify-center items-center"
-      >
-        <div class="flex items-center space-x-5 p-4">
+  <div class="p-3 md:p-6 lg:p-9 min-h-screen flex w-full">
+    <main
+      class="p-4 md:p-[40px] lg:p-[80px] min-h-[790px] max-w-[1250px] mx-auto bg-white rounded-[48px] w-full"
+    >
+      <div class="lg:flex lg:space-x-5 lg:mb-5 lg:h-[60%]">
+        <a
+          transition:name="about"
+          href="/about-me"
+          class="lg:w-[60%] h-[330px] lg:h-auto w-full bg-[#704EE7] rounded-[30px] flex justify-center items-center"
+        >
+          <div class="flex items-center space-x-5 p-4">
+            <Icon
+              name="material-symbols-light:award-star-rounded"
+              size="96"
+              class="text-[#FCCF5A]"
+            />
+            <h1
+              class="text-[#FCCF5A] font-nixie-one"
+              style="font-size:clamp(18px, 4vw + 1rem, 50px)"
+            >
+              RAFAEL MEZA
+            </h1>
+          </div>
+        </a>
+        <a
+          transition:name="projects"
+          href="/projects"
+          class="lg:w-[40%] block h-[330px] lg:h-auto w-full bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-9"
+        >
           <Icon
             name="material-symbols-light:award-star-rounded"
-            size="96"
-            class="text-[#FCCF5A]"
+            size="196"
+            class="text-[#FFE5A2] absolute -right-[80px]"
           />
-          <h1
-            class="text-[#FCCF5A] font-nixie-one"
-            style="font-size:clamp(18px, 4vw + 1rem, 50px)"
-          >
-            RAFAEL MEZA
-          </h1>
-        </div>
-      </a>
-      <a
-        transition:name="projects"
-        href="/projects"
-        class="lg:w-[40%] block w-full h-[330px] bg-[#FCCF5A] rounded-[30px] relative overflow-hidden p-10"
-      >
-        <Icon
-          name="material-symbols-light:award-star-rounded"
-          size="196"
-          class="text-[#FFE5A2] absolute -right-[80px]"
-        />
-        <div class="absolute left-0 right-0 bottom-0 p-10">
-          <h2 class="text-2xl mb-3 font-manrope">Web Development Projects</h2>
-          <p>
-            A showcase of innovative web applications focused on user
-            experience, functionality, and performance.
-          </p>
-        </div>
-      </a>
-    </div>
-    <div class="lg:flex lg:space-x-5 lg:h-[40%]">
-      <a
-        href="/contact"
-        class="block lg:w-[30%] bg-[#DFC8FD] h-[330px] rounded-[30px] overflow-hidden relative"
-      >
-        <Icon
-          name="material-symbols-light:cloud"
-          size="196"
-          class="text-[#FFE5A2] absolute -right-[80px]"
-        />
-        <article
-          transition:name="contact"
-          class="absolute left-0 right-0 bottom-0 p-10"
+          <article class="absolute left-0 right-0 bottom-0 p-8">
+            <h2 class="text-2xl mb-3 font-manrope">Web Development Projects</h2>
+            <p>
+              A showcase of innovative web applications focused on user
+              experience, functionality, and performance.
+            </p>
+          </article>
+        </a>
+      </div>
+      <div class="lg:flex lg:space-x-5 lg:h-[40%]">
+        <a
+          href="/contact"
+          class="block lg:w-[30%] h-[330px] lg:h-auto bg-[#DFC8FD] rounded-[30px] overflow-hidden relative"
         >
-          <h2 class="text-2xl mb-3 font-manrope">Get in Touch</h2>
-          <p>
-            Reach out via email or connect with me on social media. I'd love to
-            hear from you!
-          </p>
-        </article>
-      </a>
-      <a
-        href="/hobbies-interests"
-        transition:name="hobbies-interests"
-        class="lg:w-[70%] sm:h-[330px] h-[550px] bg-[#F3F3F3] rounded-[30px] overflow-hidden relative block"
-      >
-        <Icon
-          name="material-symbols-light:signpost-rounded"
-          size="196"
-          class="text-[#FFE5A2] absolute -right-[80px]"
-        />
-        <article class="absolute left-0 right-0 bottom-0 p-10">
-          <h2 class="text-2xl mb-3 font-manrope">Hobbies & Interests</h2>
+          <Icon
+            name="material-symbols-light:cloud"
+            size="196"
+            class="text-[#FFE5A2] absolute -right-[80px]"
+          />
+          <article
+            transition:name="contact"
+            class="absolute left-0 right-0 bottom-0 p-8"
+          >
+            <h2 class="text-2xl mb-3 font-manrope">Get in Touch</h2>
+            <p>
+              Reach out via email or connect with me on social media. I'd love
+              to hear from you!
+            </p>
+          </article>
+        </a>
+        <a
+          href="/hobbies-interests"
+          transition:name="hobbies-interests"
+          class="lg:w-[70%] h-[400px] min-h-[250px] lg:h-auto bg-[#F3F3F3] rounded-[30px] overflow-hidden relative block"
+        >
+          <Icon
+            name="material-symbols-light:signpost-rounded"
+            size="196"
+            class="text-[#FFE5A2] absolute -right-[80px]"
+          />
+          <article class="absolute left-0 right-0 bottom-0 p-8">
+            <h2 class="text-2xl mb-3 font-manrope">Hobbies & Interests</h2>
 
-          <p class="text-sm mb-3">
-            When I'm not coding, I love exploring my creative and active side!
-            Here's what keeps me inspired:
-          </p>
-          <ul class="text-sm mb-3">
-            <li>
-              <b>Digital Design:</b> Creating visuals in Photoshop and Illustrator.
-            </li>
-            <li>
-              <b>3D Modeling: </b>Bringing ideas to life with SketchUp and
-              AutoCAD.
-            </li>
-            <li><b>Sports: </b> Staying active with soccer and running.</li>
-            <li>
-              <b>Cooking: </b> Experimenting with new recipes and flavors in the
-              kitchen.
-            </li>
-          </ul>
-        </article>
-      </a>
-    </div>
-  </main>
+            <p class="text-sm mb-3">
+              When I'm not coding, I love exploring my creative and active side!
+              Here's what keeps me inspired:
+            </p>
+            <ul class="text-sm mb-3 leading-loose">
+              <li>
+                <b>Digital Design:</b> Creating visuals in Photoshop and Illustrator.
+              </li>
+              <li>
+                <b>3D Modeling: </b>Bringing ideas to life with SketchUp and
+                AutoCAD.
+              </li>
+              <li><b>Sports: </b> Staying active with soccer and running.</li>
+              <li>
+                <b>Cooking: </b> Experimenting with new recipes and flavors in the
+                kitchen.
+              </li>
+            </ul>
+          </article>
+        </a>
+      </div>
+    </main>
+  </div>
 </Layout>

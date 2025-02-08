@@ -3,10 +3,12 @@ import "@fontsource/raleway";
 import "@fontsource/lobster";
 import "@fontsource/nixie-one";
 import { ClientRouter } from "astro:transitions";
+
+const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="h-full">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,10 +18,15 @@ import { ClientRouter } from "astro:transitions";
       name="description"
       content="Rafael Meza - Web Developer specializing in ReactJS. Building modern, scalable, and efficient web applications. Turn your ideas into reality with custom tech solutions. Expert in front-end development and JavaScript frameworks."
     />
-    <title>Rafael Meza | Web Developer</title>
+    <title>
+      {pageTitle}
+      {pageTitle ? " | " : ""}
+      Rafael Meza | Web Developer
+    </title>
     <ClientRouter />
   </head>
-  <body id="app" class="bg-[#D8C1F6] p-3 md:p-6 lg:p-9 h-full">
+
+  <body id="app" class="bg-[#D8C1F6]">
     <slot />
   </body>
 </html>

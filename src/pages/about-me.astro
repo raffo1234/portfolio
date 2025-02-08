@@ -3,34 +3,36 @@ import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-  <div
-    transition:name="about"
-    class="max-w-[1250px] p-4 bg-[#704EE7] mx-auto h-full rounded-[62px] flex justify-center items-center relative"
-  >
-    <a
-      href="/"
-      class="w-[62px] h-[62px] flex items-center justify-center text-white top-[30px] right-[30px] bg-[#FCCF5A] absolute rounded-full"
+<Layout pageTitle="About Me">
+  <div class="p-3 md:p-6 lg:p-9 min-h-screen flex w-full">
+    <div
+      transition:name="about"
+      class="max-w-[1250px] p-4 bg-[#704EE7] w-full mx-auto rounded-[62px] flex justify-center items-center relative"
     >
-      <Icon
-        name="material-symbols-light:arrow-back-rounded"
-        size="62"
-        class="-rotate-45"
-      />
-    </a>
-    <div>
-      <div class="flex items-center mb-6 space-x-5">
+      <a
+        href="/"
+        class="w-[62px] h-[62px] flex items-center justify-center text-white top-[30px] right-[30px] bg-[#FCCF5A] absolute rounded-full"
+      >
         <Icon
-          name="material-symbols-light:award-star-rounded"
-          size="96"
-          class="text-[#FCCF5A]"
+          name="material-symbols-light:arrow-back-rounded"
+          size="62"
+          class="-rotate-45"
         />
-        <h1
-          class="text-[#FCCF5A] font-nixie-one"
-          style="font-size:clamp(18px, 4vw + 1rem, 60px)"
-        >
-          RAFAEL MEZA
-        </h1>
+      </a>
+      <div>
+        <div class="flex items-center mb-6 space-x-5">
+          <Icon
+            name="material-symbols-light:award-star-rounded"
+            size="96"
+            class="text-[#FCCF5A]"
+          />
+          <h1
+            class="text-[#FCCF5A] font-nixie-one"
+            style="font-size:clamp(18px, 4vw + 1rem, 60px)"
+          >
+            RAFAEL MEZA
+          </h1>
+        </div>
       </div>
     </div>
   </div>
