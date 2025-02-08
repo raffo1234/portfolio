@@ -11,6 +11,7 @@ import laive from "../assets/portfolio/laive.png";
 import yachayDashboard from "../assets/portfolio/dashboard-yachay.png";
 import cancino from "../assets/portfolio/cancino.png";
 import goldenpalace from "../assets/portfolio/goldenpalace.png";
+import Container from "../components/Container.astro";
 
 const images = [
   cancino,
@@ -26,37 +27,34 @@ const images = [
 ---
 
 <Layout pageTitle="Hobbies & Interests">
-  <div
-    transition:name="hobbies-interests"
-    class="max-w-[1250px] bg-[#F3F3F3] mx-auto h-full rounded-[62px] flex
-    justify-center items-center relative"
-  >
-    <a
-      href="/"
-      class="w-[62px] flex items-center justify-center h-[62px] absolute rounded-full top-[30px] z-20 right-[30px] bg-[#704EE7]"
+  <Container>
+    <div
+      transition:name="hobbies-interests"
+      class="w-full max-w-[1250px] bg-[#FCCF5A] mx-auto rounded-[62px] flex relative"
     >
-      <Icon
-        name="material-symbols-light:arrow-insert-rounded"
-        size="62"
-        class="text-[#FCCF5A] -rotate-90"
-      />
-    </a>
-    <div class="flex items-center h-full w-full md:p-5 lg:p-10">
-      <div class="w-full h-full flex justify-center relative">
-        {
-          images.map((image, index) => {
-            return (
-              <Image
-                src={image}
-                class={`${index === 0 ? "!opacity-100" : ""}  slide-js opacity-0 transition-opacity ease-in-out duration-1000 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 object-contain w-full h-full`}
-                alt="Rafael Meza | Portfolio"
-              />
-            );
-          })
-        }
-      </div>
+      <a
+        href="/"
+        class="w-[62px] flex items-center justify-center h-[62px] absolute rounded-full top-[30px] z-20 right-[30px] bg-[#704EE7]"
+      >
+        <Icon
+          name="material-symbols-light:arrow-insert-rounded"
+          size="62"
+          class="text-[#FCCF5A] -rotate-90"
+        />
+      </a>
+      {
+        images.map((image, index) => {
+          return (
+            <Image
+              src={image}
+              class={`${index === 0 ? "!opacity-100" : ""}  slide-js opacity-0 transition-opacity ease-in-out duration-1000 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-1/2 object-contain w-[95%] h-[95%]`}
+              alt="Rafael Meza | Portfolio"
+            />
+          );
+        })
+      }
     </div>
-  </div>
+  </Container>
 </Layout>
 
 <script is:inline>

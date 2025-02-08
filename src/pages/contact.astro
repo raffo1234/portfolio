@@ -3,113 +3,116 @@ import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import me from "../assets/rafael-meza.jpg";
+import Container from "../components/Container.astro";
 ---
 
 <Layout pageTitle="Get in touch">
-  <div
-    transition:name="contact"
-    class="max-w-[1250px] px-4 py-16 bg-[#FFF3EA] mx-auto min-h-full rounded-[62px] flex justify-center items-center relative w-full"
-  >
-    <a
-      href="/"
-      class="absolute flex items-center justify-center rounded-full w-[52px] h-[52px] top-[30px] text-[#FCCF5A] bg-[#704EE7] right-[30px]"
+  <Container>
+    <div
+      transition:name="contact"
+      class="max-w-[1250px] px-4 py-16 bg-[#FFF3EA] mx-auto rounded-[62px] flex justify-center items-center relative w-full"
     >
-      <Icon
-        name="material-symbols-light:arrow-back-rounded"
-        size="52"
-        class="-rotate-45"
-      />
-    </a>
-    <div>
-      <div class="mb-6">
-        <div class="flex items-center mb-6 space-x-5">
-          <Icon
-            name="material-symbols-light:award-star-rounded"
-            size="96"
-            class="text-[#FCCF5A]"
-          />
-          <h1
-            class="text-[#FCCF5A] font-nixie-one"
-            style="font-size:clamp(18px, 4vw + 1rem, 60px)"
-          >
-            RAFAEL MEZA
-          </h1>
-        </div>
-        <p>
-          If you're looking for a professional to turn designs into clean and
-          responsive code, drop me a message!
-        </p>
-      </div>
-      <div
-        class="grid gap-4 w-full"
-        style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-        }}
+      <a
+        href="/"
+        class="absolute flex items-center justify-center rounded-full w-[52px] h-[52px] top-[30px] text-[#FCCF5A] bg-[#704EE7] right-[30px]"
       >
-        <a
-          href="mailto:rafaelmezac@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-          title="Email | Rafael Meza | rafaelmezac@gmail.com"
-          class="overflow-hidden aspect-square flex items-center justify-center rounded-[30px] bg-[#704EE7] relative w-full"
-        >
-          <Icon
-            name="material-symbols-light:mark-email-read-outline"
-            size="48"
-            class="text-[#FCCF5A] absolute left-2 bottom-2"
-          />
-          <Icon
-            name="material-symbols-light:arrow-back-rounded"
-            size="48"
-            class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
-          />
-        </a>
-        <a
-          href="https://github.com/raffo1234"
-          target="_blank"
-          rel="noreferrer"
-          title="Github | Rafael Meza | raffo1234"
-          class="aspect-square rounded-[30px] bg-[#704EE7] relative w-full items-center justify-between overflow-hidden"
-        >
-          <Icon
-            name="material-symbols-light:code-blocks-outline"
-            size="48"
-            class="text-[#FCCF5A] absolute left-3 bottom-3"
-          />
-          <Icon
-            name="material-symbols-light:arrow-back-rounded"
-            size="48"
-            class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
-          />
-        </a>
-        <a
-          href="https://wa.me/+51997258592"
-          title="Whatsapp | Rafael Meza | +51 997258592"
-          target="_blank"
-          rel="noreferrer"
-          class="aspect-square rounded-[30px] bg-[#704EE7] relative w-full items-center justify-between overflow-hidden"
-        >
-          <Icon
-            name="material-symbols-light:mark-unread-chat-alt-outline"
-            size="48"
-            class="text-[#FCCF5A] absolute left-3 bottom-3"
-          />
-          <Icon
-            name="material-symbols-light:arrow-back-rounded"
-            size="48"
-            class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
-          />
-        </a>
+        <Icon
+          name="material-symbols-light:arrow-back-rounded"
+          size="52"
+          class="-rotate-45"
+        />
+      </a>
+      <div>
+        <div class="mb-6">
+          <div class="flex items-center mb-6 space-x-5">
+            <Icon
+              name="material-symbols-light:award-star-rounded"
+              size="96"
+              class="text-[#FCCF5A]"
+            />
+            <h1
+              class="text-[#FCCF5A] font-nixie-one"
+              style="font-size:clamp(18px, 4vw + 1rem, 60px)"
+            >
+              RAFAEL MEZA
+            </h1>
+          </div>
+          <p>
+            If you're looking for a professional to turn designs into clean and
+            responsive code, drop me a message!
+          </p>
+        </div>
         <div
-          class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+          class="grid gap-4 w-full"
+          style={{
+            gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+          }}
         >
-          <Image
-            src={me}
-            class="absolute object-cover object-top w-full h-full"
-            alt="Rafael Meza "
-          />
+          <a
+            href="mailto:rafaelmezac@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            title="Email | Rafael Meza | rafaelmezac@gmail.com"
+            class="overflow-hidden aspect-square flex items-center justify-center rounded-[30px] bg-[#704EE7] relative w-full"
+          >
+            <Icon
+              name="material-symbols-light:mark-email-read-outline"
+              size="48"
+              class="text-[#FCCF5A] absolute left-2 bottom-2"
+            />
+            <Icon
+              name="material-symbols-light:arrow-back-rounded"
+              size="48"
+              class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
+            />
+          </a>
+          <a
+            href="https://github.com/raffo1234"
+            target="_blank"
+            rel="noreferrer"
+            title="Github | Rafael Meza | raffo1234"
+            class="aspect-square rounded-[30px] bg-[#704EE7] relative w-full items-center justify-between overflow-hidden"
+          >
+            <Icon
+              name="material-symbols-light:code-blocks-outline"
+              size="48"
+              class="text-[#FCCF5A] absolute left-3 bottom-3"
+            />
+            <Icon
+              name="material-symbols-light:arrow-back-rounded"
+              size="48"
+              class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
+            />
+          </a>
+          <a
+            href="https://wa.me/+51997258592"
+            title="Whatsapp | Rafael Meza | +51 997258592"
+            target="_blank"
+            rel="noreferrer"
+            class="aspect-square rounded-[30px] bg-[#704EE7] relative w-full items-center justify-between overflow-hidden"
+          >
+            <Icon
+              name="material-symbols-light:mark-unread-chat-alt-outline"
+              size="48"
+              class="text-[#FCCF5A] absolute left-3 bottom-3"
+            />
+            <Icon
+              name="material-symbols-light:arrow-back-rounded"
+              size="48"
+              class="text-[#FCCF5A] absolute right-0 top-0 rotate-[135deg]"
+            />
+          </a>
+          <div
+            class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+          >
+            <Image
+              src={me}
+              class="absolute object-cover object-top w-full h-full"
+              alt="Rafael Meza "
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Container>
 </Layout>

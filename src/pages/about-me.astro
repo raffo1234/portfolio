@@ -1,10 +1,11 @@
 ---
 import { Icon } from "astro-icon/components";
 import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
 ---
 
 <Layout pageTitle="About Me">
-  <div class="p-3 md:p-6 lg:p-9 min-h-screen flex w-full">
+  <Container>
     <div
       transition:name="about"
       class="max-w-[1250px] p-4 bg-[#704EE7] w-full mx-auto rounded-[62px] flex justify-center items-center relative"
@@ -35,5 +36,5 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
-  </div>
+  </Container>
 </Layout>
