@@ -3,6 +3,7 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     fontFamily: {
+      quicksand: ["Quicksand", "sans-serif"],
       raleway: ["Raleway", "sans-serif"],
       manrope: ["Manrope", "sans-serif"],
       lobster: ["Lobster", "sans-serif"],
@@ -14,7 +15,7 @@ export default {
         orange: "#FCCF5A",
         "light-orange": "#FFE5A2",
         pink: "#DFC8FD",
-        "light-gray": "#DFC8FD",
+        "light-gray": "#eeeeee",
       },
     },
   },

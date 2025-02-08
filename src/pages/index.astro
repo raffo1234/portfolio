@@ -13,6 +13,7 @@ import Container from "../components/Container.astro";
         <a
           transition:name="about"
           href="/about-me"
+          title="About Rafael Meza"
           class="lg:w-[60%] h-[330px] lg:h-auto w-full bg-purple rounded-[24px] flex justify-center items-center"
         >
           <div class="flex items-center space-x-5 p-4">
@@ -32,6 +33,7 @@ import Container from "../components/Container.astro";
         <a
           transition:name="projects"
           href="/projects"
+          title="Projects"
           class="lg:w-[40%] block h-[330px] lg:h-auto w-full bg-orange rounded-[24px] relative overflow-hidden p-9"
         >
           <Icon
@@ -40,8 +42,8 @@ import Container from "../components/Container.astro";
             class="text-light-orange absolute -right-[80px]"
           />
           <article class="absolute left-0 right-0 bottom-0 p-8">
-            <h2 class="text-2xl mb-3 font-manrope">Web Development Projects</h2>
-            <p>
+            <h2 class="text-3xl mb-3 font-quicksand font-bold">Projects</h2>
+            <p class="text-sm leading-relaxed">
               A showcase of innovative web applications focused on user
               experience, functionality, and performance.
             </p>
@@ -51,6 +53,7 @@ import Container from "../components/Container.astro";
       <div class="lg:flex lg:space-x-5 lg:h-[40%]">
         <a
           href="/contact"
+          title="Get in Touch"
           class="block lg:w-[30%] h-[330px] lg:h-auto bg-pink rounded-[24px] overflow-hidden relative"
         >
           <Icon
@@ -62,8 +65,8 @@ import Container from "../components/Container.astro";
             transition:name="contact"
             class="absolute left-0 right-0 bottom-0 p-8"
           >
-            <h2 class="text-2xl mb-3 font-manrope">Get in Touch</h2>
-            <p>
+            <h2 class="text-3xl font-bold mb-3 font-quicksand">Get in Touch</h2>
+            <p class="text-sm leading-relaxed">
               Reach out via email or connect with me on social media. I'd love
               to hear from you!
             </p>
@@ -72,7 +75,8 @@ import Container from "../components/Container.astro";
         <a
           href="/hobbies-interests"
           transition:name="hobbies-interests"
-          class="lg:w-[70%] min-h-[430px] sm:min-h-[360px] md:min-h-[300px] lg:min-h-0 bglight-gray rounded-[24px] overflow-hidden relative block"
+          class="lg:w-[70%] min-h-[430px] sm:min-h-[360px] md:min-h-[300px] lg:min-h-0 bg-light-gray rounded-[24px] overflow-hidden relative block"
+          title="Hobbies & Interests"
         >
           <Icon
             name="material-symbols-light:signpost-rounded"
@@ -80,13 +84,14 @@ import Container from "../components/Container.astro";
             class="text-light-orange absolute -right-[80px]"
           />
           <article class="absolute left-0 right-0 bottom-0 p-8">
-            <h2 class="text-2xl mb-3 font-manrope">Hobbies & Interests</h2>
-
-            <p class="text-sm mb-3">
+            <h2 class="text-3xl font-bold mb-3 font-quicksand">
+              Hobbies & Interests
+            </h2>
+            <p class="text-sm mb-3 leading-relaxed">
               When I'm not coding, I love exploring my creative and active side!
               Here's what keeps me inspired:
             </p>
-            <ul class="text-sm mb-3 leading-loose">
+            <ul class="text-sm mb-3 leading-relaxed">
               <li>
                 <b>Digital Design:</b> Creating visuals in Photoshop and Illustrator.
               </li>

@@ -10,7 +10,7 @@ import Container from "../components/Container.astro";
   <Container>
     <div
       transition:name="contact"
-      class="max-w-[1250px] px-4 py-16 bg-[#FFF3EA] mx-auto rounded-[40px] lg:rounded-[52px] flex justify-center items-center relative w-full"
+      class="max-w-[1250px] px-4 md:px-20 py-16 bg-[#FFF3EA] mx-auto rounded-[40px] lg:rounded-[52px] flex justify-center items-center relative w-full"
     >
       <a
         href="/"
@@ -22,7 +22,7 @@ import Container from "../components/Container.astro";
           class="-rotate-45"
         />
       </a>
-      <div>
+      <div class="w-full">
         <div class="mb-6">
           <div class="flex items-center mb-6 space-x-5">
             <Icon
@@ -37,10 +37,7 @@ import Container from "../components/Container.astro";
               RAFAEL MEZA
             </h1>
           </div>
-          <p>
-            If you're looking for a professional to turn designs into clean and
-            responsive code, drop me a message!
-          </p>
+          <p class="font-lobster text-3xl text-orange">Available for work</p>
         </div>
         <div
           class="grid gap-4 w-full"
@@ -48,12 +45,21 @@ import Container from "../components/Container.astro";
             gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
           }}
         >
+          <div
+            class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+          >
+            <Image
+              src={me}
+              class="absolute object-cover object-top w-full h-full"
+              alt="Rafael Meza "
+            />
+          </div>
           <a
             href="mailto:rafaelmezac@gmail.com"
             target="_blank"
             rel="noreferrer"
             title="Email | Rafael Meza | rafaelmezac@gmail.com"
-            class="overflow-hidden aspect-square flex items-center justify-center rounded-[30px] bg-purple relative w-full"
+            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out overflow-hidden aspect-square flex items-center justify-center rounded-[30px] bg-purple relative w-full"
           >
             <Icon
               name="material-symbols-light:mark-email-read-outline"
@@ -71,7 +77,7 @@ import Container from "../components/Container.astro";
             target="_blank"
             rel="noreferrer"
             title="Github | Rafael Meza | raffo1234"
-            class="aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
+            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
           >
             <Icon
               name="material-symbols-light:code-blocks-outline"
@@ -89,7 +95,7 @@ import Container from "../components/Container.astro";
             title="Whatsapp | Rafael Meza | +51 997258592"
             target="_blank"
             rel="noreferrer"
-            class="aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
+            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
           >
             <Icon
               name="material-symbols-light:mark-unread-chat-alt-outline"
@@ -102,15 +108,6 @@ import Container from "../components/Container.astro";
               class="text-orange absolute right-0 top-0 rotate-[135deg]"
             />
           </a>
-          <div
-            class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
-          >
-            <Image
-              src={me}
-              class="absolute object-cover object-top w-full h-full"
-              alt="Rafael Meza "
-            />
-          </div>
         </div>
       </div>
     </div>
