@@ -12,7 +12,8 @@ import Container from "../components/Container.astro";
     >
       <a
         href="/"
-        class="w-[62px] h-[62px] flex items-center justify-center text-white top-[30px] right-[30px] bg-orange absolute rounded-full"
+        id="close-button-js"
+        class="opacity-0 translate-y-2 transition duration-700 tran w-[62px] h-[62px] flex items-center justify-center text-white top-[30px] right-[30px] bg-orange absolute rounded-full"
       >
         <Icon
           name="material-symbols-light:arrow-back-rounded"
@@ -38,3 +39,11 @@ import Container from "../components/Container.astro";
     </div>
   </Container>
 </Layout>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const closeButton = document.getElementById("close-button-js");
+    const classes = ["!opacity-100", "!translate-y-0"];
+    setTimeout(() => closeButton.classList.add(...classes), 300);
+  });
+</script>

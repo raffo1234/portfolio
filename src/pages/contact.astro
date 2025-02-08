@@ -14,7 +14,8 @@ import Container from "../components/Container.astro";
     >
       <a
         href="/"
-        class="absolute flex items-center justify-center rounded-full w-[52px] h-[52px] top-[30px] text-orange bg-purple right-[30px]"
+        id="close-button-js"
+        class="opacity-0 translate-y-2 transition duration-700 absolute flex items-center justify-center rounded-full w-[52px] h-[52px] top-[30px] text-orange bg-purple right-[30px]"
       >
         <Icon
           name="material-symbols-light:arrow-back-rounded"
@@ -46,7 +47,7 @@ import Container from "../components/Container.astro";
           }}
         >
           <div
-            class="aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+            class="box-js opacity-0 translate-y-2 transition duration-700 aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
           >
             <Image
               src={me}
@@ -59,17 +60,18 @@ import Container from "../components/Container.astro";
             target="_blank"
             rel="noreferrer"
             title="Email | Rafael Meza | rafaelmezac@gmail.com"
-            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out overflow-hidden aspect-square flex items-center justify-center rounded-[30px] bg-purple relative w-full"
+            class="group text-orange hover:text-purple bg-purple hover:bg-orange text-xl box-js opacity-0 translate-y-2 transition duration-500 drop-shadow-xl hover:drop-shadow-2xl ease-in-out overflow-hidden aspect-square flex items-center justify-center rounded-[30px] relative w-full"
           >
+            <span> EMAIL </span>
             <Icon
               name="material-symbols-light:mark-email-read-outline"
               size="48"
-              class="text-orange absolute left-2 bottom-2"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute left-2 bottom-2"
             />
             <Icon
               name="material-symbols-light:arrow-back-rounded"
               size="48"
-              class="text-orange absolute right-0 top-0 rotate-[135deg]"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute right-0 top-0 rotate-[135deg]"
             />
           </a>
           <a
@@ -77,17 +79,18 @@ import Container from "../components/Container.astro";
             target="_blank"
             rel="noreferrer"
             title="Github | Rafael Meza | raffo1234"
-            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
+            class="group text-orange hover:text-purple bg-purple hover:bg-orange text-xl box-js opacity-0 translate-y-2 transition duration-700 drop-shadow-xl hover:drop-shadow-2xl ease-in-out aspect-square rounded-[30px] relative w-full flex items-center justify-center overflow-hidden"
           >
+            <span> GITHUB </span>
             <Icon
               name="material-symbols-light:code-blocks-outline"
               size="48"
-              class="text-orange absolute left-3 bottom-3"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute left-3 bottom-3"
             />
             <Icon
               name="material-symbols-light:arrow-back-rounded"
               size="48"
-              class="text-orange absolute right-0 top-0 rotate-[135deg]"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute right-0 top-0 rotate-[135deg]"
             />
           </a>
           <a
@@ -95,17 +98,18 @@ import Container from "../components/Container.astro";
             title="Whatsapp | Rafael Meza | +51 997258592"
             target="_blank"
             rel="noreferrer"
-            class="drop-shadow-xl hover:drop-shadow-2xl duration-300 transition ease-in-out aspect-square rounded-[30px] bg-purple relative w-full items-center justify-between overflow-hidden"
+            class="group text-orange hover:text-purple bg-purple hover:bg-orange text-xl box-js opacity-0 translate-y-2 transition duration-700 drop-shadow-xl hover:drop-shadow-2xl ease-in-out aspect-square rounded-[30px] relative w-full flex items-center justify-center overflow-hidden"
           >
+            <span> WHATSAPP </span>
             <Icon
               name="material-symbols-light:mark-unread-chat-alt-outline"
               size="48"
-              class="text-orange absolute left-3 bottom-3"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute left-3 bottom-3"
             />
             <Icon
               name="material-symbols-light:arrow-back-rounded"
               size="48"
-              class="text-orange absolute right-0 top-0 rotate-[135deg]"
+              class="text-orange group-hover:text-purple transition-colors duration-700 absolute right-0 top-0 rotate-[135deg]"
             />
           </a>
         </div>
@@ -113,3 +117,18 @@ import Container from "../components/Container.astro";
     </div>
   </Container>
 </Layout>
+
+<script is:inline>
+  document.addEventListener("astro:page-load", () => {
+    const closeButton = document.getElementById("close-button-js");
+    const classes = ["!opacity-100", "!translate-y-0"];
+    setTimeout(() => closeButton.classList.add(...classes), 1350);
+
+    const boxes = document.querySelectorAll(".box-js");
+    boxes.forEach((box, index) => {
+      setTimeout(() => {
+        box.classList.add(...classes);
+      }, index * 350);
+    });
+  });
+</script>
