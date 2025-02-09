@@ -43,7 +43,10 @@ import Container from "../components/Container.astro";
 <script is:inline>
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
-      window.location.href = "/";
+      const closeButton = document.getElementById("close-button-js");
+      if (closeButton) {
+        closeButton.click();
+      }
     }
   });
 
