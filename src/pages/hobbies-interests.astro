@@ -59,6 +59,12 @@ const images = [
 </Layout>
 
 <script is:inline>
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      window.location.href = "/";
+    }
+  });
+
   document.addEventListener("astro:page-load", () => {
     let currentSlide = 0;
 
@@ -78,7 +84,9 @@ const images = [
 
   document.addEventListener("astro:page-load", () => {
     const closeButton = document.getElementById("close-button-js");
-    const classes = ["!opacity-100", "!translate-y-0"];
-    setTimeout(() => closeButton.classList.add(...classes), 300);
+    if (closeButton) {
+      const classes = ["!opacity-100", "!translate-y-0"];
+      setTimeout(() => closeButton.classList.add(...classes), 300);
+    }
   });
 </script>
