@@ -47,7 +47,7 @@ import Container from "../components/Container.astro";
           }}
         >
           <div
-            class="box-js opacity-0 translate-y-2 transition duration-700 aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
+            class="box-js opacity-0 translate-y-2 transition duration-700 ease-in-out aspect-square rounded-[30px] relative w-full items-center justify-between overflow-hidden"
           >
             <Image
               src={me}
@@ -71,7 +71,7 @@ import Container from "../components/Container.astro";
             <Icon
               name="material-symbols-light:arrow-back-rounded"
               size="48"
-              class="text-orange group-hover:text-purple transition-colors duration-700 absolute right-0 top-0 rotate-[135deg]"
+              class="text-orange group-hover:text-purple transition-colors duration-700 ease-in-out absolute right-0 top-0 rotate-[135deg]"
             />
           </a>
           <a
@@ -79,7 +79,7 @@ import Container from "../components/Container.astro";
             target="_blank"
             rel="noreferrer"
             title="Github | Rafael Meza | raffo1234"
-            class="group text-orange hover:text-purple bg-purple hover:bg-orange text-xl box-js opacity-0 translate-y-2 transition duration-700 drop-shadow-xl hover:drop-shadow-2xl ease-in-out aspect-square rounded-[30px] relative w-full flex items-center justify-center overflow-hidden"
+            class="group text-orange hover:text-purple bg-purple hover:bg-orange text-xl box-js ease-in-out opacity-0 translate-y-2 transition duration-700 drop-shadow-xl hover:drop-shadow-2xl ease-in-out aspect-square rounded-[30px] relative w-full flex items-center justify-center overflow-hidden"
           >
             <span> GITHUB </span>
             <Icon
@@ -128,7 +128,7 @@ import Container from "../components/Container.astro";
     boxes.forEach((box, index) => {
       setTimeout(() => {
         box.classList.add(...classes);
-      }, index * 350);
+      }, index * 300);
     });
   });
 </script>
